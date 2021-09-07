@@ -4,12 +4,26 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "tw": "npx tailwindcss -c ./tailwind.config.js -i ./src/tailwind.css -o ./src/assets/tailwind.css -w -m ",
+    "sass": "sass --no-source-map --watch ./src/assets/vue-markdown-style/main.scss ./src/assets/markdown.css  --style=compressed",
+    "devtool": "./node_modules/.bin/vue-devtools",
+    "start": "run-p tw sass serve "
   },
   "dependencies": {
+    "@headlessui/vue": "^1.4.0",
+    "@heroicons/vue": "^1.0.4",
+    "@kangc/v-md-editor": "^2.3.8",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/line-clamp": "^0.2.1",
     "core-js": "^3.6.5",
+    "firebase": "^9.0.0",
+    "highlight.js": "^11.2.0",
+    "marked": "^3.0.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-toastification": "^2.0.0-rc.1",
+    "vue-unicons": "^3.2.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
@@ -17,6 +31,11 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/devtools": "^5.3.4",
+    "autoprefixer": "^10.3.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.8"
   }
 }
